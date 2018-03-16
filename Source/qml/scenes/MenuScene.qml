@@ -13,15 +13,21 @@ SceneBase {
     // signal indicating that the creditsScene should be displayed
 
     // background
-    Rectangle {
-        anchors.fill: parent.gameWindowAnchorItem
-        color: "#47688e"
+    Image {
+    source: "../../assets/img/logo.png"
+
+    anchors.fill: parent.gameWindowAnchorItem
+
+
     }
 
-    Column {
-        id: columnMenu
+    Grid {
+        id: gridMenu
         spacing: 5
-        anchors.centerIn: parent
+        anchors.bottom: parent.gameWindowAnchorItem.bottom
+        anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
+        anchors.bottomMargin: 5
+        columns: 2
 
 
         MenuButton {
@@ -42,14 +48,7 @@ SceneBase {
         }
     }
 
-    Text {
-        id: text1
-        text: "Lords of the Arena: Bloodsport"
-        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        y: 30
-        font.bold: true
-        font.family: "Times New Roman"
-        font.pixelSize: 32
-        anchors.horizontalCenter: parent.horizontalCenter
-    }
+
+
+
 }

@@ -20,7 +20,7 @@ SceneBase {
     // background
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
-        color: "#97688e"
+        color: "#000000"
     }
 
     Column {
@@ -56,7 +56,7 @@ SceneBase {
         MenuButton {
             id: pitsButton
             radius: 5
-            text: "Enter the Pits"
+            text: "Enter the Abyssus"
             visible: true
             onClicked: selectPitsPressed()
 
@@ -72,5 +72,6 @@ SceneBase {
         font.family: "Times New Roman"
         font.pixelSize: 32
         anchors.horizontalCenter: parent.horizontalCenter
+        color: "#dcbb6d"
     }
 }
