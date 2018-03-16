@@ -20,7 +20,7 @@ SceneBase {
     // background
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
-        color: "#97688e"
+        color: "#000000"
     }
 
     Column {
@@ -72,5 +72,6 @@ SceneBase {
         font.family: "Times New Roman"
         font.pixelSize: 32
         anchors.horizontalCenter: parent.horizontalCenter
+        color: "#dcbb6d"
     }
 }

@@ -10,7 +10,7 @@ SceneBase {
 
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
-        color: "#77688e"
+        color: "#000000"
     }
 
 
@@ -50,6 +50,7 @@ SceneBase {
         font.family: "Times New Roman"
         font.pixelSize: 32
         anchors.horizontalCenter: parent.horizontalCenter
+        color: "#dcbb6d"
     }
     Image {
     source: "../../assets/img/colpic.jpg"

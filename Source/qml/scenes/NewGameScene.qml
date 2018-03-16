@@ -8,7 +8,7 @@ SceneBase {
 
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
-        color: "#37688e"
+        color: "#000000"
     }
 
     MenuButton {
@@ -64,6 +64,7 @@ SceneBase {
         font.family: "Times New Roman"
         font.pixelSize: 32
         anchors.horizontalCenter: parent.horizontalCenter
+        color: "#dcbb6d"
     }
 }
 

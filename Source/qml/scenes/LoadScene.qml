@@ -13,7 +13,7 @@ SceneBase {
     // background
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
-        color: "#ece468"
+        color: "#000000"
     }
 
     // back button to leave scene
@@ -54,6 +54,7 @@ SceneBase {
         font.family: "Times New Roman"
         font.pixelSize: 32
         anchors.horizontalCenter: parent.horizontalCenter
+        color: "#dcbb6d"
     }
 
     }
