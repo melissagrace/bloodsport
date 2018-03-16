@@ -3,7 +3,7 @@ import QtQuick 2.0
 import "../common"
 
 SceneBase {
-    id: menuScene
+    id: introStoryScene
 
     // signal indicating that the selectLevelScene should be displayed
     signal selectContinuePressed
@@ -14,7 +14,7 @@ SceneBase {
 
     // background
     Image {
-    source: "../../assets/img/logo.png"
+    source: "../../assets/img/intro.png"
 
     anchors.fill: parent.gameWindowAnchorItem
 
@@ -27,7 +27,7 @@ SceneBase {
         anchors.bottom: parent.gameWindowAnchorItem.bottom
         anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
         anchors.bottomMargin: 10
-        columns: 2
+        columns: 1
 
 
         MenuButton {
@@ -38,17 +38,11 @@ SceneBase {
             onClicked: selectContinuePressed()
 
         }
-        MenuButton {
-            id: newgameButton
-            radius: 5
-            text: "New Game"
-            visible: true
-            onClicked: selectNewPressed()
-
-        }
     }
 
 
 
 
 }
+
+

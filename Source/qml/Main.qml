@@ -24,7 +24,7 @@ GameWindow {
         id: menuScene
         // listen to the button signals of the scene and change the state according to it
         onSelectContinuePressed: window.state = "selectLevel"
-        onSelectNewPressed: window.state = "newGame"
+        onSelectNewPressed: window.state = "story"
         //onSelectNewPressed: window.state = ""
         // the menu scene is our start scene, so if back is pressed there we ask the user if he wants to quit the application
         onBackButtonPressed: {
@@ -64,6 +64,15 @@ GameWindow {
 
      }
 
+    StoryScene {
+         id: introStoryScene
+
+         onSelectContinuePressed: window.state = "newGame"
+
+
+
+     }
+
 
 
 
@@ -98,6 +107,11 @@ GameWindow {
             name: "home"
             PropertyChanges {target: homeScene; opacity: 1}
             PropertyChanges {target: window; activeScene: homeScene}
+        },
+        State {
+            name: "story"
+            PropertyChanges {target: introStoryScene; opacity: 1}
+            PropertyChanges {target: window; activeScene: introStoryScene}
         }
     ]
 }

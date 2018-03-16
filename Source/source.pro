@@ -46,4 +46,5 @@ macx {
 DISTFILES += \
     qml/scenes/NewGameScene.qml \
     qml/scenes/WelcomeScene.qml \
-    qml/scenes/HomeScene.qml
+    qml/scenes/HomeScene.qml \
+    qml/scenes/StoryScene.qml

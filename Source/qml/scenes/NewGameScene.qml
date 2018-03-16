@@ -25,7 +25,12 @@ SceneBase {
     Grid {
         id: gridMenu
         spacing: 5
-        anchors.centerIn: parent
+        anchors.bottom: newGameScene.gameWindowAnchorItem.bottom
+        anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
+        anchors.bottomMargin: 10
+
+
+
         columns: 3
 
 
@@ -33,14 +38,19 @@ SceneBase {
             id: bladeButton
             radius: 5
             text: "Blade"
+
             visible: true
             onClicked: selectWeaponPressed()
 
+
+
         }
+
         MenuButton {
             id: twoHandButton
             radius: 5
             text: "Two-Handed"
+
             visible: true
             onClicked: selectWeaponPressed()
 
@@ -49,11 +59,14 @@ SceneBase {
             id: specialButton
             radius: 5
             text: "Special Weapon"
+
             visible: true
             onClicked: selectWeaponPressed()
 
         }
     }
+
+
 
     Text {
         id: text1
