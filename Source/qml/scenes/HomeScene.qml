@@ -56,7 +56,7 @@ SceneBase {
         MenuButton {
             id: pitsButton
             radius: 5
-            text: "Enter the Pits"
+            text: "Enter the Abyssus"
             visible: true
             onClicked: selectPitsPressed()
 
