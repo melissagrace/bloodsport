@@ -7,12 +7,6 @@ GameWindow {
     screenWidth: 960
     screenHeight: 640
 
-    // You get free licenseKeys from https://v-play.net/licenseKey
-    // With a licenseKey you can:
-    //  * Publish your games & apps for the app stores
-    //  * Remove the V-Play Splash Screen or set a custom one (available with the Pro Licenses)
-    //  * Add plugins to monetize, analyze & improve your apps (available with the Pro Licenses)
-    //licenseKey: "<generate one from https://v-play.net/licenseKey>"
 
     // create and remove entities at runtime
     EntityManager {
@@ -25,7 +19,6 @@ GameWindow {
         // listen to the button signals of the scene and change the state according to it
         onSelectContinuePressed: window.state = "selectLevel"
         onSelectNewPressed: window.state = "story"
-        //onSelectNewPressed: window.state = ""
         // the menu scene is our start scene, so if back is pressed there we ask the user if he wants to quit the application
         onBackButtonPressed: {
             nativeUtils.displayMessageBox(qsTr("Really quit the game?"), "", 2);
