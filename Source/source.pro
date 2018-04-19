@@ -50,6 +50,7 @@ DISTFILES += \
     qml/scenes/HomeScene.qml \
     qml/scenes/StoryScene.qml \
     qml/actorEntity.qml \
-    qml/scenes/Gladiator.qml
+    qml/scenes/Gladiator.qml \
+    qml/actor/WeaponActor.py
 
 HEADERS +=
