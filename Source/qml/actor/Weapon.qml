@@ -3,8 +3,8 @@ import QtQuick 2.0
 
 EntityBase {
 
-    entityId: "entity"
-    entityType: "customEntity"
+    entityId: "WeaponEntity"
+    entityType: "Weapon"
 
     Rectangle {
         width: 50
