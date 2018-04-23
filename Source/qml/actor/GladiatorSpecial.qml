@@ -4,32 +4,32 @@ import QtQuick 2.0
 
 EntityBase {
 
-    entityType: "gladiator"
+    id: gladiatorSpecial
+    entityType: "gladiatorSpecial"
+
+
 
     property int health: 100//default health to be set on an individual entity basis\
-    property Entity weapon
+    property variant weapon
     property int combatStance
     property variant wepprof
+    property string name
 
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
 
     // I think this will be used later to detect hits and attacks
     signal strike
     signal struck
-    property alias source: gladiatorSprite.source
+    property alias name: gladiator.name
     property alias wepprof: gladiator.wepprof
-    property alias weapon
-    property alias combatStance
+    property alias weapon: gladiator.weapon
+    property alias combatStance: gladiator.combatStance
+    property alias variationType: blade.variationType
 
-    Image {
-            id: gladiatorSprite
-            source: "../assets/sprites/BLADE.png"
-            anchors.fill: boxCollider
-        }
+    MultiResolutionImage {
+                source: "../../assets/sprites/Special.png"
 
-
-
-
+            }
 
 
 
@@ -37,3 +37,4 @@ EntityBase {
 
 
 }
+

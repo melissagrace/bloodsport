@@ -1,6 +1,7 @@
 import VPlay 2.0
 import QtQuick 2.0
 import "../common"
+import "../actor"
 
 SceneBase {
     id: menuScene
@@ -11,16 +12,37 @@ SceneBase {
 
 
     // signal indicating that the creditsScene should be displayed
-
     // background
-    Image {
-    source: "../../assets/img/logo.png"
 
-    anchors.fill: parent.gameWindowAnchorItem
+     Image {
+        source: "../../assets/img/logo.png"
+
+        anchors.fill: parent.gameWindowAnchorItem
+
+
+        }
+
+
+
+    GladiatorBlade {
+        id: gladiator
+       //surprise im here, i am an entity from the actors folder and my image was changed from the default
+        anchors.centerIn: parent.gameWindowAnchorItem.centerIn
+        height: 100
+        width: 40
 
 
     }
 
+    // background
+
+       // Image {
+        //source: "../../assets/img/logo.png"
+
+        //anchors.fill: parent.gameWindowAnchorItem
+
+
+        //}
     Grid {
         id: gridMenu
         spacing: 5
@@ -46,7 +68,16 @@ SceneBase {
             onClicked: selectNewPressed()
 
         }
+
+
     }
+
+
+
+
+
+
+
 
 
 

@@ -52,6 +52,8 @@ DISTFILES += \
     qml/actorEntity.qml \
     qml/scenes/Gladiator.qml \
     qml/Weapon.qml \
-    qml/actor/Gladiator.qml
+    qml/actor/Gladiator2Hand.qml \
+    qml/actor/GladiatorBlade.qml \
+    qml/actor/GladiatorSpecial.qml
 
 HEADERS +=
