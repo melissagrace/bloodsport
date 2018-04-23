@@ -4,7 +4,7 @@ import "../common"
 import "../actor"
 
 SceneBase {
-    id: arenaCol1Level1
+    id: arenaC1L1
 
     // signal indicating that the selectLevelScene should be displayed
     signal selectCombatStancePressed

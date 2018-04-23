@@ -4,7 +4,10 @@ import "../common"
 
 SceneBase {
     id: newGameScene
-   signal selectWeaponPressed
+    // uhh we need to track what the player selects, so that they have the correct character. or instead of choosing a starting type, we let them pick for each fight? maybe assign a value to chosen gladiator type, then check on each level what their choice is, and give them a menu where they can change their choice to switch gladiator?
+   signal selectWeaponBladePressed
+   signal selectWeaponTwoHandPressed
+   signal selectWeaponSpecialPressed
 
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
@@ -40,7 +43,7 @@ SceneBase {
             text: "Blade"
 
             visible: true
-            onClicked: selectWeaponPressed()
+            onClicked: selectWeaponBladePressed()
 
 
 
@@ -52,7 +55,7 @@ SceneBase {
             text: "Two-Handed"
 
             visible: true
-            onClicked: selectWeaponPressed()
+            onClicked: selectWeaponTwoHandPressed()
 
         }
         MenuButton {
@@ -61,7 +64,7 @@ SceneBase {
             text: "Special Weapon"
 
             visible: true
-            onClicked: selectWeaponPressed()
+            onClicked: selectWeaponSpecialPressed()
 
         }
     }
