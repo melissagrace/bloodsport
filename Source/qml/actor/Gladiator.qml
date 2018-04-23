@@ -1,24 +1,35 @@
 import VPlay 2.0
 import QtQuick 2.0
-
-//this is like js and im totally learning here
+//see https://v-play.net/doc/vplay-entity-concept/
 
 EntityBase {
 
-    entityId: "gladiator"
     entityType: "gladiator"
 
-    Rectangle {
-        width: 50
-        height: 50
-        color: "red"
-    }
+    property int health: 100//default health to be set on an individual entity basis\
+    property Entity weapon
+    property int combatStance
+    property variant wepprof
 
-    property int health: 100 //default health to be set on an individual entity basis
+    // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
 
-    property Entity weapon // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
+    // I think this will be used later to detect hits and attacks
+    signal strike
+    signal struck
+    property alias source: gladiatorSprite.source
+    property alias wepprof: gladiator.wepprof
+    property alias weapon
+    property alias combatStance
 
-    property type name: value
+    Image {
+            id: gladiatorSprite
+            source: "../assets/sprites/BLADE.png"
+            anchors.fill: boxCollider
+        }
+
+
+
+
 
 
 

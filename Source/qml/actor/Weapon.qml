@@ -3,13 +3,21 @@ import QtQuick 2.0
 
 EntityBase {
 
-    entityId: "WeaponEntity"
-    entityType: "Weapon"
+    entityType: "weapon"
 
-    Rectangle {
-        width: 50
-        height: 50
-        color: "red"
-    }
+    property Entity weapon
+    property real hitChance //real == double
+    property int healthBonus
+    property variant wepType
+    property alias wepType
+    property alias healthBonus
+    property alias combatStance
+
+    // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
+
+    // I think this will be used later to detect hits and attacks
+    signal strike
+
+
 
 }

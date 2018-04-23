@@ -57,7 +57,8 @@ DIST          = qml/scenes/NewGameScene.qml \
 		qml/scenes/StoryScene.qml \
 		qml/actorEntity.qml \
 		qml/scenes/Gladiator.qml \
-		qml/actor/WeaponActor.py  ..\Source\main.cpp \
+		qml/Weapon.qml \
+		qml/actor/Gladiator.qml  ..\Source\main.cpp \
 		..\Source\main.cpp
 QMAKE_TARGET  = source
 DESTDIR        = release\ #avoid trailing-slash linebreak

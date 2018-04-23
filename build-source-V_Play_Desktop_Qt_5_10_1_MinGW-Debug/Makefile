@@ -208,6 +208,7 @@ Makefile: ../Source/source.pro F:/vplay/V-Play/mingw_32/mkspecs/win32-g++/qmake.
 		F:/vplay/V-Play/mingw_32/mkspecs/features/qt_config.prf \
 		F:/vplay/V-Play/mingw_32/mkspecs/win32-g++/qmake.conf \
 		F:/vplay/V-Play/mingw_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		F:/vplay/V-Play/mingw_32/mkspecs/features/exclusive_builds.prf \
 		F:/vplay/V-Play/mingw_32/mkspecs/features/toolchain.prf \
 		F:/vplay/V-Play/mingw_32/mkspecs/features/default_pre.prf \
@@ -391,6 +392,7 @@ F:/vplay/V-Play/mingw_32/mkspecs/features/qt_functions.prf:
 F:/vplay/V-Play/mingw_32/mkspecs/features/qt_config.prf:
 F:/vplay/V-Play/mingw_32/mkspecs/win32-g++/qmake.conf:
 F:/vplay/V-Play/mingw_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 F:/vplay/V-Play/mingw_32/mkspecs/features/exclusive_builds.prf:
 F:/vplay/V-Play/mingw_32/mkspecs/features/toolchain.prf:
 F:/vplay/V-Play/mingw_32/mkspecs/features/default_pre.prf:
