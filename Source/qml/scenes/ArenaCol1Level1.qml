@@ -4,11 +4,13 @@ import "../common"
 import "../actor"
 
 SceneBase {
-    id: menuScene
+    id: arenaCol1Level1
 
     // signal indicating that the selectLevelScene should be displayed
-    signal selectContinuePressed
-    signal selectNewPressed
+    signal selectCombatStancePressed
+    signal selectDefensiveStancePressed
+    signal selectAttackPressed
+
 
 
     // signal indicating that the creditsScene should be displayed
@@ -45,25 +47,35 @@ SceneBase {
 
 
         MenuButton {
-            id: continueButton
+            id: fightButton
             radius: 5
-            text: "Continue"
+            text: "Fight!"
             visible: true
-            onClicked: selectContinuePressed()
+            onClicked: selectFightPressed()
 
         }
         MenuButton {
-            id: newgameButton
+            id: combatStanceButton
             radius: 5
-            text: "New Game"
+            text: "Combat Stance"
             visible: true
-            onClicked: selectNewPressed()
+            onClicked: selectCombatPressed()
+
+        }
+
+        MenuButton {
+            id: defensiveStanceButton
+            radius: 5
+            text: "Defensive Stance"
+            visible: true
+            onClicked: selectDefensivePressed()
 
         }
 
 
-    }
 
+    }
+// need logic to transition to end fight scene, also need to create end fight scene
 
 
 

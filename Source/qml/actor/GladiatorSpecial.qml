@@ -15,6 +15,9 @@ EntityBase {
     property variant wepprof
     property string name
 
+
+
+
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
 
     // I think this will be used later to detect hits and attacks

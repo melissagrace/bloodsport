@@ -55,6 +55,8 @@ GameWindow {
     HomeScene {
          id: homeScene
 
+         onSelectArenaPressed: window.state = "arenaSelect"
+
      }
 
     StoryScene {
@@ -65,6 +67,15 @@ GameWindow {
 
 
      }
+
+    ArenaSelectMenu{
+        id: arenaSelect
+
+        onSelectCol1Pressed: window.state = "arenaCol1Menu"
+
+
+
+    }
 
 
 
@@ -105,6 +116,25 @@ GameWindow {
             name: "story"
             PropertyChanges {target: introStoryScene; opacity: 1}
             PropertyChanges {target: window; activeScene: introStoryScene}
+        },
+
+        State {
+            name: "arenaSelect"
+            PropertyChanges {target: arenaSelect; opacity: 1}
+            PropertyChanges {target: window; activeScene: arenaSelect}
+                },
+
+        State {
+            name: "arenaCol1Menu"
+            PropertyChanges {target: arenaSelectCol1Menu; opacity: 1}
+            PropertyChanges {target: window; activeScene: arenaSelectCol1Menu}
+        },
+
+        State {
+            name: "arenaCol1Level1"
+            PropertyChanges {target: arenaCol1Level1; opacity: 1}
+            PropertyChanges {target: window; activeScene: arenaCol1Level1}
         }
+
     ]
 }

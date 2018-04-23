@@ -4,11 +4,13 @@ import "../common"
 import "../actor"
 
 SceneBase {
-    id: menuScene
+    id: arenaSelect
 
     // signal indicating that the selectLevelScene should be displayed
-    signal selectContinuePressed
-    signal selectNewPressed
+    signal selectCol1Pressed
+    signal selectCol2Pressed
+    signal selectCol3Pressed
+
 
 
     // signal indicating that the creditsScene should be displayed
@@ -34,7 +36,7 @@ SceneBase {
 
     }
 
-
+// this will be organized into seperate pages for each tier
     Grid {
         id: gridMenu
         spacing: 5
@@ -45,33 +47,34 @@ SceneBase {
 
 
         MenuButton {
-            id: continueButton
+            id: arenaCol1
             radius: 5
-            text: "Continue"
+            text: "Arena Colosseum 1"
             visible: true
-            onClicked: selectContinuePressed()
+            onClicked: selectCol1Pressed()
 
         }
         MenuButton {
-            id: newgameButton
+            id: arenaCol2
             radius: 5
-            text: "New Game"
+            text: "Arena Colosseum 2"
             visible: true
-            onClicked: selectNewPressed()
+            onClicked: selectCol2Pressed()
+
+        }
+
+        MenuButton {
+            id: arenaCol3
+            radius: 5
+            text: "Arena Colosseum 3"
+            visible: true
+            onClicked: selectCol3Pressed()
 
         }
 
 
+
     }
-
-
-
-
-
-
-
-
-
 
 
 }

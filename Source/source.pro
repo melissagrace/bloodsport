@@ -54,6 +54,9 @@ DISTFILES += \
     qml/Weapon.qml \
     qml/actor/Gladiator2Hand.qml \
     qml/actor/GladiatorBlade.qml \
-    qml/actor/GladiatorSpecial.qml
+    qml/actor/GladiatorSpecial.qml \
+    qml/scenes/ArenaSelectMenu.qml \
+    qml/scenes/ArenaCol1Level1.qml \
+    qml/scenes/ArenaCol1Menu.qml
 
 HEADERS +=
