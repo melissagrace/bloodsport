@@ -43,7 +43,9 @@ GameWindow {
 
     NewGameScene {
         id: newGameScene
-        onSelectWeaponPressed: window.state = "welcome"
+        onSelectWeaponBladePressed: window.state = "welcome"
+        onSelectWeaponTwoHandPressed: window.state = "welcome"
+        onSelectWeaponSpecialPressed: window.state = "welcome"
         onBackButtonPressed: window.state = "menu"
     }
 
