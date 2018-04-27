@@ -1,6 +1,8 @@
 import VPlay 2.0
 import QtQuick 2.0
 import "scenes"
+import "actor"
+
 
 GameWindow {
     id: window
@@ -8,11 +10,21 @@ GameWindow {
     screenHeight: 640
 
 
+
+
     // create and remove entities at runtime
     EntityManager {
         id: entityManager
-        entityContainer: scene 
+        entityContainer: scene
+
+
     }
+
+
+
+
+
+
 
     // menu scene
     MenuScene {
@@ -33,6 +45,7 @@ GameWindow {
                     Qt.quit()
             }
         }
+
     }
 
     // scene for selecting levels
@@ -48,7 +61,7 @@ GameWindow {
         onSelectWeaponTwoHandPressed: window.state = "welcome"
         onSelectWeaponSpecialPressed: window.state = "welcome"
         onBackButtonPressed: window.state = "menu"
-        onBladePlayer: gladiatoreBlade.player = true
+        onBladePlayer: gladiatorBlade.player = true
         onSpecialPlayer: gladiatorSpecial.player = true
         onTwoHandPlayer: gladiator2Hand.player = true
     }

@@ -10,11 +10,10 @@ SceneBase {
     signal selectCombatStancePressed
     signal selectDefensiveStancePressed
     signal selectAttackPressed
+    signal playerAttackEnemy(string entityId)
 
-    function wepAttack(gladiator1 , gladiator2) {
 
 
-    }
 
 
     // signal indicating that the creditsScene should be displayed
@@ -27,15 +26,28 @@ SceneBase {
 
 
         }
+     EnemyGladiator {
+         id: enemyOne
+         anchors.bottom: parent.gameWindowAnchorItem.bottom
+         anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
+         anchors.bottomMargin: 10
+         height: 80
+         width: 30
+
+
+     }
+
+
 
 
 
     GladiatorBlade {
-        id: gladiator
+        id: gladiatorBlade
        //surprise im here, i am an entity from the actors folder and my image was changed from the default
         anchors.centerIn: parent.gameWindowAnchorItem.centerIn
-        height: 100
+        height: 30
         width: 40
+
 
 
     }
@@ -56,8 +68,7 @@ SceneBase {
             radius: 5
             text: "Fight!"
             visible: true
-            onClicked: selectAttackPressed()
-
+            onClicked: playerAttackEnemy(enemyOne)
 
         }
         MenuButton {

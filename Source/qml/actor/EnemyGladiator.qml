@@ -4,7 +4,7 @@ import QtQuick 2.0
 import "../actor"
 
 EntityBase {
-    id: gladiatorBlade
+    id: enemyBlade
 
     entityType: "gladiatorBlade"
 
@@ -22,9 +22,19 @@ EntityBase {
 
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
 
-    // I think this will be used later to detect hits and attacks
-    signal strike
-    signal struck
+    Connections {
+         target: arenaC1L1
+         onPlayerAttackEnemy: {
+           // compare the monsters entityId with the on that is passed from the signal
+           if(enemyBlade.entityId == entityId) {
+             getShot()
+           }
+         }
+       }
+
+       function getShot() {
+         visible = false
+       }
 
 
     MultiResolutionImage {
@@ -41,25 +51,10 @@ EntityBase {
     }
 
 
-    function attackEnemy(entityId) {
-        if (Math.random() * 100 <= baseBlade.totalHitChance)
-            arenaC1L1.playerAttackEnemy(entityId)
-    }
 
-    function getAttacked() {
 
 
 
 
     }
-
-
-
-
-    }
-
-
-
-
-
 

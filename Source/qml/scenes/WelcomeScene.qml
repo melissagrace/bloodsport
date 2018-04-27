@@ -3,6 +3,7 @@ import QtQuick 2.0
 import "../common"
 
 
+
 SceneBase {
     id: welcomeScene
    signal selectFightPressed

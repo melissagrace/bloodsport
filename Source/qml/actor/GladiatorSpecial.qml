@@ -1,7 +1,7 @@
 import VPlay 2.0
 import QtQuick 2.0
 //see https://v-play.net/doc/vplay-entity-concept/
-import "../actor/Weapon.qml"
+import "../actor"
 
 EntityBase {
 
@@ -16,8 +16,8 @@ EntityBase {
     property variant wepprof
     property string name
     property variant wepInHand: baseSpecial
-    property bool player: false
 
+    property bool player: false
 
 
 

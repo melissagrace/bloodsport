@@ -1,6 +1,7 @@
 import VPlay 2.0
 import QtQuick 2.0
 import "../common"
+import "../actor"
 
 SceneBase {
     id: newGameScene
@@ -11,6 +12,27 @@ SceneBase {
    signal bladePlayer
    signal twoHandPlayer
    signal specialPlayer
+
+
+    GladiatorBlade {
+        id: gladiatorBlade
+        player: false
+
+
+    }
+
+    GladiatorTwoHand {
+        id: gladiatorTwoHand
+        player: false
+
+    }
+
+    GladiatorSpecial{
+        id: gladiatorSpecial
+        player: false
+
+    }
+
 
 
     Rectangle {
