@@ -21,8 +21,6 @@ SceneBase {
        source: "../../assets/img/logo.png"
 
        anchors.fill: parent.gameWindowAnchorItem
-
-
         }
 
 
@@ -33,7 +31,6 @@ SceneBase {
         anchors.top: parent.gameWindowAnchorItem.top
         anchors.centerIn: parent.gameWindowAnchorItem.centerIn
         anchors.topMargin: 10
-<<<<<<< HEAD
 
         EnemyGladiator {
             id: enemyBlade
@@ -46,22 +43,6 @@ SceneBase {
         }
 
     }
-=======
-        columns: 3
-
-    EnemyGladiator {
-        id: enemyBlade
-        health: 100
-
-    }
-
-    GladiatorBlade {
-        id: gladiatorBlade
-       //surprise im here, i am an entity from the actors folder and my image was changed from the default
-
- }
-}
->>>>>>> 343f5b249e3dd631a73294a738c5e3e08e2ede93
 
     Text {
         id: textStatus
