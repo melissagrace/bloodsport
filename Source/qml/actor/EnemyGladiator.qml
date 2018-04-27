@@ -21,15 +21,6 @@ EntityBase {
     property int totalHitChance: baseBladeEnemy.hitChance + gladiatorBlade.hitChanceBonus
 
 
-
-    MultiResolutionImage {
-                source: "../../assets/sprites/BLADE.png"
-                height: 120
-                width: 80
-
-            }
-
-
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
 
     Connections {

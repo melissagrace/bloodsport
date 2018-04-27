@@ -20,7 +20,6 @@ SceneBase {
 
      Image {
         source: "../../assets/img/logo.png"
-
         anchors.fill: parent.gameWindowAnchorItem
 
 

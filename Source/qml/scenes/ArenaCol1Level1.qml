@@ -20,9 +20,8 @@ SceneBase {
 
     Image {
        source: "../../assets/img/Arena.png"
-
        anchors.fill: parent.gameWindowAnchorItem
-        }
+    }
 
     EnemyGladiator {
         id: enemyBlade
@@ -56,8 +55,7 @@ SceneBase {
         anchors.bottom: parent.gameWindowAnchorItem.bottom
         anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
         anchors.bottomMargin: 10
-        columns: 2
-
+        columns: 3
 
         MenuButton {
             id: attackButton
@@ -73,9 +71,8 @@ SceneBase {
             text: "Defensive Stance"
             visible: true
             onClicked: enemyBlade.hitChanceBonus = -15 //selectDefensiveStancePressed(), enemyBlade.hitChanceBonus = -15
-
-
         }
+
         MenuButton {
             id: attackStanceButton
             radius: 5
@@ -83,20 +80,9 @@ SceneBase {
             visible: true
             onClicked: gladiatorBlade.hitChanceBonus = 15 // selectAtttackStancePressed(), gladiatorBlade.hitChanceBonus = 15
 
-
         }
-
-
-
-
     }
 // need logic to transition to end fight scene, also need to create end fight scene
-
-
-
-
-
-
 
 
 
