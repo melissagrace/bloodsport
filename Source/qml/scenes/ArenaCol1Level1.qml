@@ -85,7 +85,7 @@ SceneBase {
         MenuButton {
             id: defensiveStanceButton
             radius: 5
-            text: "Defensive Stance" + enemyBlade.totalHitChance
+            text: "Defensive Stance"
             visible: true
             onClicked: enemyBlade.hitChanceBonus = -15 //selectDefensiveStancePressed(), enemyBlade.hitChanceBonus = -15
 
@@ -94,7 +94,7 @@ SceneBase {
         MenuButton {
             id: attackStanceButton
             radius: 5
-            text: "Attack Stance" + gladiatorBlade.totalHitChance
+            text: "Attack Stance"
             visible: true
             onClicked: gladiatorBlade.hitChanceBonus = 15 // selectAtttackStancePressed(), gladiatorBlade.hitChanceBonus = 15
 
