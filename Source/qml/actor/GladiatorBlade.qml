@@ -55,6 +55,8 @@ EntityBase {
            if(Math.random() * 100 <= gladiatorBlade.totalHitChance) {
              getHit()
            }
+           else if(gladiatorBlade.health <= 0)
+               getDefeat()
          }
        }
 
@@ -63,6 +65,9 @@ EntityBase {
 
 
       }
+       function getDefeat() {
+
+       }
     }
 
 
