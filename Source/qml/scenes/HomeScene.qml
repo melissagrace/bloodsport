@@ -63,15 +63,5 @@ SceneBase {
         }
     }
 
-    Text {
-        id: text1
-        text: "Lords of the Arena: Bloodsport"
-        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        y: 30
-        font.bold: true
-        font.family: "Times New Roman"
-        font.pixelSize: 32
-        anchors.horizontalCenter: parent.horizontalCenter
-        color: "#dcbb6d"
-    }
+
 }
