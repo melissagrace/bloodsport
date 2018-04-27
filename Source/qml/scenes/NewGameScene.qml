@@ -14,24 +14,6 @@ SceneBase {
    signal specialPlayer
 
 
-    GladiatorBlade {
-        id: gladiatorBlade
-        player: false
-
-
-    }
-
-    GladiatorTwoHand {
-        id: gladiatorTwoHand
-        player: false
-
-    }
-
-    GladiatorSpecial{
-        id: gladiatorSpecial
-        player: false
-
-    }
 
 
 
