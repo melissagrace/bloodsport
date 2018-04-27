@@ -6,8 +6,8 @@ SceneBase {
     id: defeatScene
 
     // signal indicating that the defeatScene should be displayed
-    signal
-    signal
+    //signal
+    //signal
 
 
     // signal indicating that the creditsScene should be displayed

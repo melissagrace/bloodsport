@@ -96,6 +96,18 @@ GameWindow {
     ArenaCol1Level1 {
         id: arenaC1L1
         onSelectAttackPressed: window.state = "selectAttackPressed"
+        onGetVictory: window.state = "Victory"
+        onGetDefeat: window.state = "Defeat"
+
+
+    }
+
+    VictoryScene {
+        id: victoryScene
+    }
+
+    DefeatScene {
+        id: defeatScene
 
     }
 
@@ -162,8 +174,6 @@ GameWindow {
             name: "selectAttackPressed"
             PropertyChanges {target: arenaC1L1; opacity: 1}
             PropertyChanges {target: window; activeScene: arenaC1L1}
-            PropertyChanges {target: weapon1; hitChanceBonus: 15}
-            PropertyChanges {target: weapon1; defenseBonus: 0}
         },
 
         State {
