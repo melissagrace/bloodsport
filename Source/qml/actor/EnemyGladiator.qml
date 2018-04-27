@@ -15,11 +15,19 @@ EntityBase {
     property int combatStance
     property variant wepprof
     property string name
-    property variant wepInHand: baseBlade
+    property variant wepInHand: baseBladeEnemy
     property bool player: false
     property int hitChanceBonus: 0
+    property int totalHitChance: baseBladeEnemy.hitChance + gladiatorBlade.hitChanceBonus
 
 
+
+    MultiResolutionImage {
+                source: "../../assets/sprites/BLADE.png"
+                height: 120
+                width: 80
+
+            }
 
 
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
@@ -27,16 +35,15 @@ EntityBase {
     Connections {
          target: arenaC1L1
          onPlayerAttackEnemy: {
-           // compare the monsters entityId with the on that is passed from the signal
-           if(Math.random() * 100 <= baseBlade.hitChance + gladiatorBlade.hitChanceBonus ) {
+           if(Math.random() * 100 <= baseBladeEnemy.totalHitChance ) {
              getShot()
            }
          }
        }
 
-    function getShot() {
-         enemyBlade.health = enemyBlade.health - 20
-    }
+        function getShot() {
+         enemyBlade.health = enemyBlade.health - baseBladeEnemy.baseDamage
+        }
 
     function attackPlayer(entityId) {
         arenaC1L1.enemyAttackPlayer(entityId)
@@ -49,10 +56,9 @@ EntityBase {
     }
 
     Weapon {
-        id: baseBlade
+        id: baseBladeEnemy
         hitChance: 50
         baseDamage: 20
-        totalHitChance: baseBlade.hitChance + baseBlade.hitChanceBonus
     }
 }
 

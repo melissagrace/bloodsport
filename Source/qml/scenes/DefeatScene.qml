@@ -1,28 +1,25 @@
 import VPlay 2.0
 import QtQuick 2.0
 import "../common"
-import "../actor"
 
 SceneBase {
-    id: menuScene
+    id: defeatScene
 
-    // signal indicating that the selectLevelScene should be displayed
-    signal selectContinuePressed
-    signal selectNewPressed
+    // signal indicating that the defeatScene should be displayed
+    signal
+    signal
 
 
     // signal indicating that the creditsScene should be displayed
+
     // background
+    Image {
+    source: "../../assets/img/DEFEAT.png"
 
-     Image {
-        source: "../../assets/img/logo.png"
-        anchors.fill: parent.gameWindowAnchorItem
-
-
-        }
+    anchors.fill: parent.gameWindowAnchorItem
 
 
-
+    }
 
     Grid {
         id: gridMenu
@@ -30,7 +27,7 @@ SceneBase {
         anchors.bottom: parent.gameWindowAnchorItem.bottom
         anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
         anchors.bottomMargin: 10
-        columns: 2
+        columns: 1
 
 
         MenuButton {
@@ -41,24 +38,7 @@ SceneBase {
             onClicked: selectContinuePressed()
 
         }
-        MenuButton {
-            id: newgameButton
-            radius: 5
-            text: "New Game"
-            visible: true
-            onClicked: selectNewPressed()
-
-        }
-
-
     }
-
-
-
-
-
-
-
 
 
 

@@ -157,12 +157,12 @@ GameWindow {
             PropertyChanges {target: window; activeScene: arenaC1L1}
             PropertyChanges {target: arenaC1L1; opacity: 1}
         },
-        
+
         State {
             name: "selectAttackPressed"
             PropertyChanges {target: arenaC1L1; opacity: 1}
             PropertyChanges {target: window; activeScene: arenaC1L1}
-            PropertyChanges {target: weapon1; hitChanceBonus: 15} 
+            PropertyChanges {target: weapon1; hitChanceBonus: 15}
             PropertyChanges {target: weapon1; defenseBonus: 0}
         },
 
@@ -172,6 +172,18 @@ GameWindow {
             PropertyChanges {target: window; activeScene: arenaC1L1}
             PropertyChanges {target: ; hitChanceBonus: 0}
             PropertyChanges {target: weapon2; defenseBonus: 20}
+        },
+
+        State {
+            name: "Defeat"
+            PropertyChanges {target: defeatScene; opacity: 1}
+            PropertyChanges {target: window; activeScene: defeatScene}
+        },
+
+        State {
+            name: "Victory"
+            PropertyChanges {target: defeatScene; opacity: 1}
+            PropertyChanges {target: window; activeScene: victoryScene}
         }
 
     ]
