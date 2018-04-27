@@ -49,6 +49,11 @@ GameWindow {
         onSelectWeaponSpecialPressed: window.state = "welcome"
         onBackButtonPressed: window.state = "menu"
         onBladePlayer: gladiatoreBlade.player = true
+<<<<<<< HEAD
+=======
+        onSpecialPlayer: gladiatorSpecial.player = true
+        onTwoHandPlayer: gladiator2Hand
+>>>>>>> 17eef3fabb66cda61d2bd6f40670eceb868ec16b
     }
 
     WelcomeScene {
@@ -158,6 +163,7 @@ GameWindow {
             name: "selectAttackPressed"
             PropertyChanges {target: arenaC1L1; opacity: 1}
             PropertyChanges {target: window; activeScene: arenaC1L1}
+<<<<<<< HEAD
             PropertyChanges {target: weapon1; hitChanceBonus: 15}
             PropertyChanges {target: weapon1; defenseBonus: 0} 
         },
@@ -168,6 +174,9 @@ GameWindow {
             PropertyChanges {target: window; activeScene: arenaC1L1}
             PropertyChanges {target: weapon2; hitChanceBonus: 0} 
             PropertyChanges {target: weapon2; defenseBonus: 20} 
+=======
+            PropertyChanges {target: weapon1; hitChanceBonus: 15} 
+>>>>>>> 17eef3fabb66cda61d2bd6f40670eceb868ec16b
         }
 
     ]
