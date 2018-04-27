@@ -10,6 +10,7 @@ SceneBase {
     signal selectDefensiveStancePressed
     signal selectAttackPressed
     signal playerAttackEnemy(string entityId)
+    signal enemyAttackPlayer(string entityId)
 
 
 
@@ -33,31 +34,34 @@ SceneBase {
         id: gridMenu1
         spacing: 5
         anchors.top: parent.gameWindowAnchorItem.top
-        anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
+        anchors.centerIn: parent.gameWindowAnchorItem.centerIn
         anchors.topMargin: 10
         columns: 3
 
     EnemyGladiator {
         id: enemyBlade
         health: 100
-        height: 60
-        width: 30
 
     }
 
     GladiatorBlade {
         id: gladiatorBlade
        //surprise im here, i am an entity from the actors folder and my image was changed from the default
-        height: 30
-        width: 40
-
-
-
 
  }
-
-    
 }
+
+    Text {
+        id: textStatus
+        text: "Player Health " + gladiatorBlade.health + "             " + "Enemy Health " + enemyBlade.health
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        y: 30
+        font.bold: true
+        font.family: "Times New Roman"
+        font.pixelSize: 24
+        anchors.horizontalCenter: parent.horizontalCenter
+        color: "#dcbb6d"
+    }
 
     Grid {
         id: gridMenu
@@ -71,15 +75,15 @@ SceneBase {
         MenuButton {
             id: attackButton
             radius: 5
-            text: "Fight!" + enemyBlade.health
+            text: "Fight!"
             visible: true
-            onClicked: playerAttackEnemy("enemyBlade")
+            onClicked: playerAttackEnemy("enemyBlade"), enemyAttackPlayer("gladiatorBlade") //ideally a function should determine player's current fielded gladiator
         }
 
         MenuButton {
             id: defensiveStanceButton
             radius: 5
-            text: "Defensive Stance" + gladiatorBlade.hitChanceBonus
+            text: "Defensive Stance"
             visible: true
             onClicked: selectDefensiveStancePressed()
 

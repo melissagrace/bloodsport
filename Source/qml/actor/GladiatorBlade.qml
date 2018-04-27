@@ -31,8 +31,8 @@ EntityBase {
 
     MultiResolutionImage {
                 source: "../../assets/sprites/BLADE.png"
-                height: 60
-                width: 6
+                height: 40
+                width: 40
 
             }
 
@@ -48,6 +48,22 @@ EntityBase {
     function attackEnemy(entityId) {
             arenaC1L1.playerAttackEnemy(entityId)
     }
+
+    Connections {
+         target: arenaC1L1
+         onEnemyAttackPlayer: {
+           // compare the monsters entityId with the on that is passed from the signal
+           if(Math.random() * 100 <= baseBlade.hitChance + enemyBlade.hitChanceBonus ) {
+             getHit()
+           }
+         }
+       }
+
+       function getHit() {
+         gladiatorBlade.health = gladiatorBlade.health - 20
+
+
+       }
 
 
 
