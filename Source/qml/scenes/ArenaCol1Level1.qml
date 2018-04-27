@@ -8,6 +8,7 @@ SceneBase {
 
     // signal indicating that the selectLevelScene should be displayed
     signal selectDefensiveStancePressed
+    signal selectAttackStancePressed
     signal selectAttackPressed
     signal playerAttackEnemy(string entityId)
     signal enemyAttackPlayer(string entityId)
@@ -32,23 +33,24 @@ SceneBase {
 
     Grid {
         id: gridMenu1
-        spacing: 5
-        anchors.top: parent.gameWindowAnchorItem.top
-        anchors.centerIn: parent.gameWindowAnchorItem.centerIn
+        spacing: 20
+        anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
         anchors.topMargin: 10
         columns: 3
 
-    EnemyGladiator {
+        EnemyGladiator {
         id: enemyBlade
         health: 100
+        hitChanceBonus: 0
 
-    }
+        }
 
-    GladiatorBlade {
+        GladiatorBlade {
         id: gladiatorBlade
+        hitChanceBonus: 0
        //surprise im here, i am an entity from the actors folder and my image was changed from the default
 
- }
+    }
 }
 
     Text {
@@ -83,12 +85,22 @@ SceneBase {
         MenuButton {
             id: defensiveStanceButton
             radius: 5
-            text: "Defensive Stance"
+            text: "Defensive Stance" + enemyBlade.totalHitChance
             visible: true
-            onClicked: selectDefensiveStancePressed()
+            onClicked: enemyBlade.hitChanceBonus = -15 //selectDefensiveStancePressed(), enemyBlade.hitChanceBonus = -15
 
 
         }
+        MenuButton {
+            id: attackStanceButton
+            radius: 5
+            text: "Attack Stance" + gladiatorBlade.totalHitChance
+            visible: true
+            onClicked: gladiatorBlade.hitChanceBonus = 15 // selectAtttackStancePressed(), gladiatorBlade.hitChanceBonus = 15
+
+
+        }
+
 
 
 
