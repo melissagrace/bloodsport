@@ -10,6 +10,7 @@ SceneBase {
     signal selectDefensiveStancePressed
     signal selectAttackPressed
     signal playerAttackEnemy(string entityId)
+    signal enemyAttackPlayer(string entityId)
 
 
     // signal indicating that the creditsScene should be displayed
@@ -30,8 +31,9 @@ SceneBase {
         id: gridMenu1
         spacing: 5
         anchors.top: parent.gameWindowAnchorItem.top
-        anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
+        anchors.centerIn: parent.gameWindowAnchorItem.centerIn
         anchors.topMargin: 10
+<<<<<<< HEAD
 
         EnemyGladiator {
             id: enemyBlade
@@ -43,6 +45,34 @@ SceneBase {
             //surprise im here, i am an entity from the actors folder and my image was changed from the default
         }
 
+    }
+=======
+        columns: 3
+
+    EnemyGladiator {
+        id: enemyBlade
+        health: 100
+
+    }
+
+    GladiatorBlade {
+        id: gladiatorBlade
+       //surprise im here, i am an entity from the actors folder and my image was changed from the default
+
+ }
+}
+>>>>>>> 343f5b249e3dd631a73294a738c5e3e08e2ede93
+
+    Text {
+        id: textStatus
+        text: "Player Health " + gladiatorBlade.health + "             " + "Enemy Health " + enemyBlade.health
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        y: 30
+        font.bold: true
+        font.family: "Times New Roman"
+        font.pixelSize: 24
+        anchors.horizontalCenter: parent.horizontalCenter
+        color: "#dcbb6d"
     }
 
     Grid {
@@ -57,15 +87,15 @@ SceneBase {
         MenuButton {
             id: attackButton
             radius: 5
-            text: "Fight!" + enemyBlade.health
+            text: "Fight!"
             visible: true
-            onClicked: playerAttackEnemy("enemyBlade")
+            onClicked: playerAttackEnemy("enemyBlade"), enemyAttackPlayer("gladiatorBlade") //ideally a function should determine player's current fielded gladiator
         }
 
         MenuButton {
             id: defensiveStanceButton
             radius: 5
-            text: "Defensive Stance" + gladiatorBlade.hitChanceBonus
+            text: "Defensive Stance"
             visible: true
             onClicked: selectDefensiveStancePressed()
 

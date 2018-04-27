@@ -40,11 +40,20 @@ EntityBase {
 
        }
 
+       function attackPlayer(entityId) {
+               arenaC1L1.enemyAttackPlayer(entityId)
+       }
+
 
     MultiResolutionImage {
                 source: "../../assets/sprites/BLADE.png"
+<<<<<<< HEAD
                 height: 100
                 width: 100
+=======
+                height: 25
+                width: 25
+>>>>>>> 343f5b249e3dd631a73294a738c5e3e08e2ede93
 
             }
 
