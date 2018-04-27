@@ -46,6 +46,7 @@ EntityBase {
          }
        }
 
+<<<<<<< HEAD
        function getShot() {
          enemyBlade.health = enemyBlade.health - baseBladeEnemy.baseDamage
 
@@ -57,4 +58,27 @@ EntityBase {
        }
 
     }
+=======
+    function getShot() {
+         enemyBlade.health = enemyBlade.health - 20
+    }
+
+    function attackPlayer(entityId) {
+        arenaC1L1.enemyAttackPlayer(entityId)
+    }
+
+    MultiResolutionImage {
+        source: "../../assets/sprites/BLADE.png"
+        height: 100
+        width: 100
+    }
+
+    Weapon {
+        id: baseBlade
+        hitChance: 50
+        baseDamage: 20
+        totalHitChance: baseBlade.hitChance + baseBlade.hitChanceBonus
+    }
+}
+>>>>>>> 1e399ee36deeecd063525fe3aa03a19656ac1a2c
 
