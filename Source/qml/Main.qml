@@ -73,39 +73,30 @@ GameWindow {
      }
     HomeScene {
          id: homeScene
-
          onSelectArenaPressed: window.state = "arenaSelect"
 
      }
 
-    id: introStoryScene
-
-    onSelectContinuePressed: window.state = "newGame"
-    StoryScene {
-
-
+    Scene {
+        id: introStoryScene
+        onSelectContinuePressed: window.state = "newGame"
 
      }
 
     ArenaSelectMenu{
         id: arenaSelect
-
         onSelectCol1Pressed: window.state = "arenaCol1Menu"
-
-
 
     }
 
     ArenaCol1Menu {
         id: arenaSelectCol1Menu
-
         onSelectCol1Level1Pressed: window.state = "arenaCol1Level1"
 
     }
 
     ArenaCol1Level1 {
         id: arenaC1L1
-        
         onSelectAttackPressed: window.state = "selectAttackPressed"
 
     }
@@ -165,8 +156,8 @@ GameWindow {
 
         State {
             name: "arenaCol1Level1"
-            PropertyChanges {target: arenaC1L1; opacity: 1}
             PropertyChanges {target: window; activeScene: arenaC1L1}
+            PropertyChanges {target: arenaC1L1; opacity: 1}
         },
         
         State {
@@ -174,6 +165,15 @@ GameWindow {
             PropertyChanges {target: arenaC1L1; opacity: 1}
             PropertyChanges {target: window; activeScene: arenaC1L1}
             PropertyChanges {target: weapon1; hitChanceBonus: 15} 
+            PropertyChanges {target: weapon1; defenseBonus: 0}
+        },
+
+        State {
+            name: "selectDefensiveStancePressed"
+            PropertyChanges {target: arenaC1L1; opacity: 1}
+            PropertyChanges {target: window; activeScene: arenaC1L1}
+            PropertyChanges {target: weapon2; hitChanceBonus: 0}
+            PropertyChanges {target: weapon2; defenseBonus: 20}
         }
 
     ]

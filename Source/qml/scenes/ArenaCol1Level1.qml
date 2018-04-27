@@ -18,12 +18,13 @@ SceneBase {
     // signal indicating that the creditsScene should be displayed
     // background
 
-     Image {
-        source: "../../assets/img/logo.png"
+    Image {
+       source: "../../assets/img/logo.png"
 
-        anchors.fill: parent.gameWindowAnchorItem
+       anchors.fill: parent.gameWindowAnchorItem
 
 
+<<<<<<< HEAD
         }
      EnemyGladiator {
          id: enemyOne
@@ -37,6 +38,9 @@ SceneBase {
      }
 
 
+=======
+       }
+>>>>>>> a983c0912c01b812ec87798d40b21d7b7423380e
 
 
 
