@@ -9,6 +9,9 @@ SceneBase {
    signal selectWeaponTwoHandPressed
    signal selectWeaponSpecialPressed
    signal bladePlayer
+   signal twoHandPlayer
+   signal specialPlayer
+
 
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
@@ -56,7 +59,7 @@ SceneBase {
             text: "Two-Handed"
 
             visible: true
-            onClicked: selectWeaponTwoHandPressed()
+            onClicked: selectWeaponTwoHandPressed(), twoHandPlayer()
 
         }
         MenuButton {
@@ -65,7 +68,7 @@ SceneBase {
             text: "Special Weapon"
 
             visible: true
-            onClicked: selectWeaponSpecialPressed()
+            onClicked: selectWeaponSpecialPressed(), specialPlayer()
 
         }
     }

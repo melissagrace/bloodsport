@@ -29,7 +29,7 @@ EntityBase {
     property alias wepprof: gladiatorBlade.wepprof
     property alias weapon: gladiatorBlade.weapon
     property alias combatStance: gladiatorBlade.combatStance
-    property alias combatStance: gladiatorBlade.player
+    property alias player: gladiatorBlade.player
 
 
     MultiResolutionImage {

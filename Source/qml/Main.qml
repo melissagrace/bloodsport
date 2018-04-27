@@ -49,6 +49,8 @@ GameWindow {
         onSelectWeaponSpecialPressed: window.state = "welcome"
         onBackButtonPressed: window.state = "menu"
         onBladePlayer: gladiatoreBlade.player = true
+        onSpecialPlayer: gladiatorSpecial.player = true
+        onTwoHandPlayer: gladiator2Hand.player = true
     }
 
     WelcomeScene {
