@@ -31,36 +31,11 @@ SceneBase {
         y: 60
     }
 
-<<<<<<< HEAD
     GladiatorBlade {
         id: gladiatorBlade
         x: 20
         y: 60
-=======
-
-    Grid {
-        id: gridMenu1
-        spacing: 20
-        anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
-        anchors.topMargin: 10
-        columns: 3
-
-        EnemyGladiator {
-        id: enemyBlade
-        health: 100
-        hitChanceBonus: 0
-
-        }
-
-        GladiatorBlade {
-        id: gladiatorBlade
-        hitChanceBonus: 0
-       //surprise im here, i am an entity from the actors folder and my image was changed from the default
-
->>>>>>> fa9c7e3d6327367c12306392c1d88886567eca0e
     }
-}
-
 
 
     Text {

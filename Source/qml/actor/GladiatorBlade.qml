@@ -31,20 +31,11 @@ EntityBase {
     signal struck
 
 
-<<<<<<< HEAD
     MultiResolutionImage {
         source: "../../assets/sprites/BLADE.png"
         height: 200
         width: 200
     }
-=======
-   MultiResolutionImage {
-                source: "../../assets/sprites/BLADE.png"
-                height: 100
-                width: 60
-
-            }
->>>>>>> fa9c7e3d6327367c12306392c1d88886567eca0e
 
     Weapon {
         id: baseBlade
