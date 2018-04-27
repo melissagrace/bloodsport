@@ -18,7 +18,7 @@ SceneBase {
 
 
     Image {
-       source: "../../assets/img/logo.png"
+       source: "../../assets/img/Arena.png"
 
        anchors.fill: parent.gameWindowAnchorItem
         }
@@ -98,4 +98,3 @@ SceneBase {
 
 
 }
-
