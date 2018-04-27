@@ -77,7 +77,7 @@ GameWindow {
 
      }
 
-    Scene {
+    StoryScene {
         id: introStoryScene
         onSelectContinuePressed: window.state = "newGame"
 
