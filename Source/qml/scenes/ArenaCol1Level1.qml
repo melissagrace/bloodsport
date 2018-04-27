@@ -31,7 +31,6 @@ SceneBase {
         spacing: 20
         anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
         anchors.topMargin: 10
-<<<<<<< HEAD
         columns: 3
 
         EnemyGladiator {
@@ -48,20 +47,7 @@ SceneBase {
 
     }
 }
-=======
 
-        EnemyGladiator {
-            id: enemyBlade
-            health: 100
-        }
-
-        GladiatorBlade {
-            id: gladiatorBlade
-            //surprise im here, i am an entity from the actors folder and my image was changed from the default
-        }
-
-    }
->>>>>>> 1e399ee36deeecd063525fe3aa03a19656ac1a2c
 
     Text {
         id: textStatus

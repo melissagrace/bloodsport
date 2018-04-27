@@ -31,15 +31,11 @@ EntityBase {
     signal struck
 
 
-    MultiResolutionImage {
+   MultiResolutionImage {
                 source: "../../assets/sprites/BLADE.png"
                 height: 100
-<<<<<<< HEAD
                 width: 60
 
-=======
-                width: 100
->>>>>>> 1e399ee36deeecd063525fe3aa03a19656ac1a2c
             }
 
     Weapon {
@@ -61,27 +57,15 @@ EntityBase {
              getHit()
            }
          }
-<<<<<<< HEAD
        }
 
        function getHit() {
          gladiatorBlade.health = gladiatorBlade.health - baseBlade.baseDamage
 
 
-       }
-
-
-
-
-
-=======
+      }
     }
->>>>>>> 1e399ee36deeecd063525fe3aa03a19656ac1a2c
 
-    function getHit() {
-        gladiatorBlade.health = gladiatorBlade.health - 20
-    }
-}
 
 
 

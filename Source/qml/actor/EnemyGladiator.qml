@@ -29,11 +29,6 @@ EntityBase {
 
             }
 
-    Weapon {
-        id: baseBladeEnemy
-        property int hitChance: 50
-        property int baseDamage: 20
-    }
 
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
 
@@ -46,22 +41,9 @@ EntityBase {
          }
        }
 
-<<<<<<< HEAD
-       function getShot() {
+        function getShot() {
          enemyBlade.health = enemyBlade.health - baseBladeEnemy.baseDamage
-
-
-       }
-
-       function attackPlayer(entityId) {
-               arenaC1L1.enemyAttackPlayer(entityId)
-       }
-
-    }
-=======
-    function getShot() {
-         enemyBlade.health = enemyBlade.health - 20
-    }
+        }
 
     function attackPlayer(entityId) {
         arenaC1L1.enemyAttackPlayer(entityId)
@@ -74,11 +56,9 @@ EntityBase {
     }
 
     Weapon {
-        id: baseBlade
+        id: baseBladeEnemy
         hitChance: 50
         baseDamage: 20
-        totalHitChance: baseBlade.hitChance + baseBlade.hitChanceBonus
     }
 }
->>>>>>> 1e399ee36deeecd063525fe3aa03a19656ac1a2c
 
