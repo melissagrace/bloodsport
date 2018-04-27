@@ -24,7 +24,6 @@ SceneBase {
        anchors.fill: parent.gameWindowAnchorItem
 
 
-<<<<<<< HEAD
         }
      EnemyGladiator {
          id: enemyOne
@@ -38,9 +37,7 @@ SceneBase {
      }
 
 
-=======
-       }
->>>>>>> a983c0912c01b812ec87798d40b21d7b7423380e
+
 
 
 

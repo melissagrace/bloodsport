@@ -14,17 +14,8 @@ EntityBase {
     property variant wepType
     property real totalHitChance: hitChance + hitChanceBonus
     
-<<<<<<< HEAD
 
-=======
-    property alias wepType
-    property alias hitChance
-    property alias healthBonus
-    property alias hitChanceBonus
-    property alias defenseBonus
-    property alias baseDamage
-    property alias combatStance
->>>>>>> 16bb107666614c7d55b22d5280546bdd1c17874a
+
 
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
 
