@@ -23,11 +23,11 @@ EntityBase {
     // I think this will be used later to detect hits and attacks
     signal strike
     signal struck
-    property alias name: gladiator.name
-    property alias wepprof: gladiator.wepprof
-    property alias weapon: gladiator.weapon
-    property alias combatStance: gladiator.combatStance
-    property alias player: gladiatorBlade.
+    property alias name: gladiator2Hand.name
+    property alias wepprof: gladiator2Hand.wepprof
+    property alias weapon: gladiator2Hand.weapon
+    property alias combatStance: gladiator2Hand.combatStance
+    property alias player: gladiator2Hand.player
 
 
     MultiResolutionImage {
