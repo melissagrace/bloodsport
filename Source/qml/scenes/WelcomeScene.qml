@@ -27,7 +27,7 @@ SceneBase {
         MenuButton {
             id: fightButton
             radius: 5
-            text: "Fight!"
+            text: "Tutorial"
             visible: true
             onClicked: selectFightPressed()
 
@@ -35,7 +35,7 @@ SceneBase {
         MenuButton {
             id: skipHomeButton
             radius: 5
-            text: "Click me to skip to the home menu!"
+            text: "Continue to game!"
             visible: true
             onClicked: selectSkipPressed()
 
