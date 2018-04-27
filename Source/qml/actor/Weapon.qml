@@ -9,6 +9,7 @@ EntityBase {
     property real hitChance //real == double
     property int healthBonus
     property real hitChanceBonus
+    property real defenseBonus
     property real baseDamage
     property variant wepType
     
@@ -16,6 +17,7 @@ EntityBase {
     property alias hitChance
     property alias healthBonus
     property alias hitChanceBonus
+    property alias defenseBonus
     property alias baseDamage
     property alias combatStance
 

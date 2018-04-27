@@ -65,10 +65,10 @@ GameWindow {
 
      }
 
-    StoryScene {
-         id: introStoryScene
+    id: introStoryScene
 
-         onSelectContinuePressed: window.state = "newGame"
+    onSelectContinuePressed: window.state = "newGame"
+    StoryScene {
 
 
 

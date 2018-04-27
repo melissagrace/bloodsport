@@ -7,7 +7,6 @@ SceneBase {
     id: arenaC1L1
 
     // signal indicating that the selectLevelScene should be displayed
-    signal selectCombatStancePressed
     signal selectDefensiveStancePressed
     signal selectAttackPressed
 
@@ -60,21 +59,13 @@ SceneBase {
 
 
         }
-        MenuButton {
-            id: combatStanceButton
-            radius: 5
-            text: "Combat Stance"
-            visible: true
-            onClicked: selectCombatPressed()
-
-        }
 
         MenuButton {
             id: defensiveStanceButton
             radius: 5
             text: "Defensive Stance"
             visible: true
-            onClicked: selectDefensivePressed()
+            onClicked: selectDefensiveStancePressed()
 
         }
 
