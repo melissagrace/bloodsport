@@ -9,7 +9,6 @@ SceneBase {
     //signal
     //signal
 
-
     // signal indicating that the Scene should be displayed
 
     // background

@@ -5,7 +5,7 @@ import "../common"
 SceneBase {
     id: defeatScene
 
-    // signal indicating that the defeatScene should be displayed
+    //signal indicating that the defeatScene should be displayed
     //signal
     //signal
 

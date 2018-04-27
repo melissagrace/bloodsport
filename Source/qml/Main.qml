@@ -16,13 +16,7 @@ GameWindow {
     EntityManager {
         id: entityManager
         entityContainer: scene
-
-
     }
-
-
-
-
 
 
 
@@ -98,8 +92,6 @@ GameWindow {
         onSelectAttackPressed: window.state = "selectAttackPressed"
         onGetVictory: window.state = "Victory"
         onGetDefeat: window.state = "Defeat"
-
-
     }
 
     VictoryScene {
