@@ -39,7 +39,6 @@ EntityBase {
         }
         function getVictory() {
             enemyBlade.health = enemyBlade.health + 100
-
         }
 
     function attackPlayer(entityId) {
