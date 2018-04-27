@@ -18,6 +18,7 @@ SceneBase {
     // signal indicating that the creditsScene should be displayed
     // background
 
+
     Image {
        source: "../../assets/img/logo.png"
 
@@ -25,34 +26,38 @@ SceneBase {
 
 
         }
-     EnemyGladiator {
-         id: enemyOne
-         anchors.bottom: parent.gameWindowAnchorItem.bottom
-         anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
-         anchors.bottomMargin: 10
-         height: 80
-         width: 30
-
-
-     }
 
 
 
+    Grid {
+        id: gridMenu1
+        spacing: 5
+        anchors.top: parent.gameWindowAnchorItem.top
+        anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
+        anchors.topMargin: 10
+        columns: 3
 
+    EnemyGladiator {
+        id: enemyBlade
+        health: 100
+        height: 60
+        width: 30
 
+    }
 
     GladiatorBlade {
         id: gladiatorBlade
        //surprise im here, i am an entity from the actors folder and my image was changed from the default
-        anchors.centerIn: parent.gameWindowAnchorItem.centerIn
         height: 30
         width: 40
 
 
 
-    }
-    
 
+ }
+
+    
+}
 
     Grid {
         id: gridMenu
@@ -66,18 +71,18 @@ SceneBase {
         MenuButton {
             id: attackButton
             radius: 5
-            text: "Fight!"
+            text: "Fight!" + enemyBlade.health
             visible: true
-            onClicked: playerAttackEnemy(enemyOne)
-
+            onClicked: playerAttackEnemy("enemyBlade")
         }
 
         MenuButton {
             id: defensiveStanceButton
             radius: 5
-            text: "Defensive Stance"
+            text: "Defensive Stance" + gladiatorBlade.hitChanceBonus
             visible: true
             onClicked: selectDefensiveStancePressed()
+
 
         }
 
@@ -96,3 +101,4 @@ SceneBase {
 
 
 }
+

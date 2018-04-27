@@ -17,6 +17,8 @@ EntityBase {
     property string name
     property variant wepInHand: baseBlade
     property bool player: false
+    property int hitChanceBonus: 0
+
 
 
 
@@ -26,19 +28,23 @@ EntityBase {
          target: arenaC1L1
          onPlayerAttackEnemy: {
            // compare the monsters entityId with the on that is passed from the signal
-           if(enemyBlade.entityId == entityId) {
+           if(Math.random() * 100 <= baseBlade.hitChance + gladiatorBlade.hitChanceBonus ) {
              getShot()
            }
          }
        }
 
        function getShot() {
-         visible = false
+         enemyBlade.health = enemyBlade.health - 20
+
+
        }
 
 
     MultiResolutionImage {
                 source: "../../assets/sprites/BLADE.png"
+                height: 30
+                width: 10
 
             }
 
@@ -46,7 +52,6 @@ EntityBase {
         id: baseBlade
         hitChance: 50
         baseDamage: 20
-        hitChanceBonus: 0
         totalHitChance: baseBlade.hitChance + baseBlade.hitChanceBonus
     }
 

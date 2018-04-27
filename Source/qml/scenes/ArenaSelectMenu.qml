@@ -26,15 +26,7 @@ SceneBase {
 
 
 
-    GladiatorBlade {
-        id: gladiator
-       //surprise im here, i am an entity from the actors folder and my image was changed from the default
-        anchors.centerIn: parent.gameWindowAnchorItem.centerIn
-        height: 100
-        width: 40
 
-
-    }
 
 // this will be organized into seperate pages for each tier
     Grid {

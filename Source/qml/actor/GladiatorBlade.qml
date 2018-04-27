@@ -17,6 +17,8 @@ EntityBase {
     property string name
     property variant wepInHand: baseBlade
     property bool player: false
+    property int hitChanceBonus: 0
+
 
 
 
@@ -29,6 +31,8 @@ EntityBase {
 
     MultiResolutionImage {
                 source: "../../assets/sprites/BLADE.png"
+                height: 60
+                width: 6
 
             }
 
@@ -42,16 +46,10 @@ EntityBase {
 
 
     function attackEnemy(entityId) {
-        if (Math.random() * 100 <= baseBlade.totalHitChance)
             arenaC1L1.playerAttackEnemy(entityId)
     }
 
-    function getAttacked() {
 
-
-
-
-    }
 
 
 

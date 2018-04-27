@@ -61,9 +61,7 @@ GameWindow {
         onSelectWeaponTwoHandPressed: window.state = "welcome"
         onSelectWeaponSpecialPressed: window.state = "welcome"
         onBackButtonPressed: window.state = "menu"
-        onBladePlayer: gladiatorBlade.player = true
-        onSpecialPlayer: gladiatorSpecial.player = true
-        onTwoHandPlayer: gladiator2Hand.player = true
+
     }
 
     WelcomeScene {
@@ -172,7 +170,7 @@ GameWindow {
             name: "selectDefensiveStancePressed"
             PropertyChanges {target: arenaC1L1; opacity: 1}
             PropertyChanges {target: window; activeScene: arenaC1L1}
-            PropertyChanges {target: weapon2; hitChanceBonus: 0}
+            PropertyChanges {target: ; hitChanceBonus: 0}
             PropertyChanges {target: weapon2; defenseBonus: 20}
         }
 
