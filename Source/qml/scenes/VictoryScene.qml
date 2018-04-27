@@ -6,8 +6,8 @@ SceneBase {
     id: victoryScene
 
     // signal indicating that the victoryScene should be displayed
-    signal
-    signal
+    //signal
+    //signal
 
 
     // signal indicating that the Scene should be displayed

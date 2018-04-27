@@ -10,8 +10,11 @@ SceneBase {
     signal selectDefensiveStancePressed
     signal selectAttackStancePressed
     signal selectAttackPressed
+    signal getDefeat
+    signal getVictory
     signal playerAttackEnemy(string entityId)
     signal enemyAttackPlayer(string entityId)
+
 
 
     // signal indicating that the creditsScene should be displayed
