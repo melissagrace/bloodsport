@@ -36,6 +36,24 @@ SceneBase {
         y: 60
     }
 
+    NumberAnimation {
+        id: gladiatorFightAnimation
+        target: gladiatorBlade
+        property: "x"
+        from: 60
+        to: 20
+        duration: 150
+    }
+
+    NumberAnimation {
+        id: enemyFightAnimation
+        target: enemyBlade
+        property: "x"
+        from: 200
+        to: 240
+        duration: 150
+    }
+
 
     Text {
         id: textStatus
@@ -46,7 +64,7 @@ SceneBase {
         font.family: "Times New Roman"
         font.pixelSize: 24
         anchors.horizontalCenter: parent.horizontalCenter
-        color: "#dcbb6d"
+        color: "#c01b1b"
     }
 
     Grid {
@@ -62,7 +80,11 @@ SceneBase {
             radius: 5
             text: "Fight!"
             visible: true
-            onClicked: playerAttackEnemy("enemyBlade"), enemyAttackPlayer("gladiatorBlade") //ideally a function should determine player's current fielded gladiator
+            onClicked: playerAttackEnemy("enemyBlade"),
+                       enemyAttackPlayer("gladiatorBlade"),
+                       gladiatorFightAnimation.start(),
+                       enemyFightAnimation.start()
+            //ideally a function should determine player's current fielded gladiator
         }
 
         MenuButton {
