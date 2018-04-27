@@ -19,16 +19,24 @@ SceneBase {
 
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
-        color: "#000000"
+        color: "#734c37"
     }
+
+    Image {
+       source: "../../assets/img/gladiator-choice.png"
+       width: 500
+       height: 170
+       anchors.centerIn: parent.gameWindowAnchorItem
+       }
 
     MenuButton {
         text: "Back"
+        radius: 1
         // anchor the button to the gameWindowAnchorItem to be on the edge of the screen on any device
         anchors.right: newGameScene.gameWindowAnchorItem.right
-        anchors.rightMargin: 10
+        anchors.rightMargin: 3
         anchors.bottom: newGameScene.gameWindowAnchorItem.bottom
-        anchors.bottomMargin: 10
+        anchors.bottomMargin: 3
         onClicked: backButtonPressed()
     }
 
