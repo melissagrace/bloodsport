@@ -31,8 +31,8 @@ EntityBase {
 
     MultiResolutionImage {
                 source: "../../assets/sprites/BLADE.png"
-                height: 60
-                width: 6
+                height: 100
+                width: 100
 
             }
 

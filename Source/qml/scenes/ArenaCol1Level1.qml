@@ -12,9 +12,6 @@ SceneBase {
     signal playerAttackEnemy(string entityId)
 
 
-
-
-
     // signal indicating that the creditsScene should be displayed
     // background
 
@@ -35,29 +32,18 @@ SceneBase {
         anchors.top: parent.gameWindowAnchorItem.top
         anchors.horizontalCenter: parent.gameWindowAnchorItem.horizontalCenter
         anchors.topMargin: 10
-        columns: 3
 
-    EnemyGladiator {
-        id: enemyBlade
-        health: 100
-        height: 60
-        width: 30
+        EnemyGladiator {
+            id: enemyBlade
+            health: 100
+        }
+
+        GladiatorBlade {
+            id: gladiatorBlade
+            //surprise im here, i am an entity from the actors folder and my image was changed from the default
+        }
 
     }
-
-    GladiatorBlade {
-        id: gladiatorBlade
-       //surprise im here, i am an entity from the actors folder and my image was changed from the default
-        height: 30
-        width: 40
-
-
-
-
- }
-
-    
-}
 
     Grid {
         id: gridMenu
