@@ -23,26 +23,19 @@ SceneBase {
        anchors.fill: parent.gameWindowAnchorItem
         }
 
-
-
-    Grid {
-        id: gridMenu1
-        spacing: 5
-        anchors.top: parent.gameWindowAnchorItem.top
-        anchors.centerIn: parent.gameWindowAnchorItem.centerIn
-        anchors.topMargin: 10
-
-        EnemyGladiator {
-            id: enemyBlade
-            health: 100
-        }
-
-        GladiatorBlade {
-            id: gladiatorBlade
-            //surprise im here, i am an entity from the actors folder and my image was changed from the default
-        }
-
+    EnemyGladiator {
+        id: enemyBlade
+        health: 100
+        x: 240
+        y: 60
     }
+
+    GladiatorBlade {
+        id: gladiatorBlade
+        x: 20
+        y: 60
+    }
+
 
     Text {
         id: textStatus
