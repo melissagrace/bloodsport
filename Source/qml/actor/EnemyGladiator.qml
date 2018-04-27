@@ -38,11 +38,17 @@ EntityBase {
            if(Math.random() * 100 <= baseBladeEnemy.totalHitChance ) {
              getShot()
            }
+           else if(enemyBlade.health <= 0)
+               getVictory()
          }
        }
 
         function getShot() {
          enemyBlade.health = enemyBlade.health - baseBladeEnemy.baseDamage
+        }
+        function getVictory() {
+            enemyBlade.health = enemyBlade.health + 100
+
         }
 
     function attackPlayer(entityId) {
