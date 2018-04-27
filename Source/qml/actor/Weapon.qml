@@ -8,9 +8,15 @@ EntityBase {
     property Entity weapon
     property real hitChance //real == double
     property int healthBonus
+    property real hitChanceBonus
+    property real baseDamage
     property variant wepType
+    
     property alias wepType
+    property alias hitChance
     property alias healthBonus
+    property alias hitChanceBonus
+    property alias baseDamage
     property alias combatStance
 
     // im thinking weapons will be its own entity, and we will inheret them, with generated stats, to put in a gladiators hand.
@@ -21,3 +27,5 @@ EntityBase {
 
 
 }
+
+

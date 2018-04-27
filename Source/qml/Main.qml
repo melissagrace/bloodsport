@@ -11,6 +11,7 @@ GameWindow {
     // create and remove entities at runtime
     EntityManager {
         id: entityManager
+        entityContainer: scene 
     }
 
     // menu scene
@@ -47,6 +48,7 @@ GameWindow {
         onSelectWeaponTwoHandPressed: window.state = "welcome"
         onSelectWeaponSpecialPressed: window.state = "welcome"
         onBackButtonPressed: window.state = "menu"
+        onBladePlayer: gladiatoreBlade.player = true
     }
 
     WelcomeScene {
@@ -88,6 +90,8 @@ GameWindow {
 
     ArenaCol1Level1 {
         id: arenaC1L1
+        
+        onSelectAttackPressed: window.state = "selectAttackPressed"
 
     }
 
@@ -148,6 +152,13 @@ GameWindow {
             name: "arenaCol1Level1"
             PropertyChanges {target: arenaC1L1; opacity: 1}
             PropertyChanges {target: window; activeScene: arenaC1L1}
+        },
+        
+        State {
+            name: "selectAttackPressed"
+            PropertyChanges {target: arenaC1L1; opacity: 1}
+            PropertyChanges {target: window; activeScene: arenaC1L1}
+            PropertyChanges {target: weapon1; hitChanceBonus: 15} 
         }
 
     ]

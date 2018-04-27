@@ -11,6 +11,10 @@ SceneBase {
     signal selectDefensiveStancePressed
     signal selectAttackPressed
 
+    function wepAttack(gladiator1 , gladiator2) {
+
+
+    }
 
 
     // signal indicating that the creditsScene should be displayed
@@ -35,6 +39,7 @@ SceneBase {
 
 
     }
+    
 
 
     Grid {
@@ -47,11 +52,12 @@ SceneBase {
 
 
         MenuButton {
-            id: fightButton
+            id: attackButton
             radius: 5
             text: "Fight!"
             visible: true
-            onClicked: selectFightPressed()
+            onClicked: selectAttackPressed()
+
 
         }
         MenuButton {

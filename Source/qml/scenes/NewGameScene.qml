@@ -8,6 +8,7 @@ SceneBase {
    signal selectWeaponBladePressed
    signal selectWeaponTwoHandPressed
    signal selectWeaponSpecialPressed
+   signal bladePlayer
 
     Rectangle {
         anchors.fill: parent.gameWindowAnchorItem
@@ -43,7 +44,7 @@ SceneBase {
             text: "Blade"
 
             visible: true
-            onClicked: selectWeaponBladePressed()
+            onClicked: selectWeaponBladePressed(), bladePlayer()
 
 
 
