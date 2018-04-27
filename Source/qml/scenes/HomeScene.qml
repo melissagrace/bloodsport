@@ -18,9 +18,9 @@ SceneBase {
     // signal indicating that the creditsScene should be displayed
 
     // background
-    Rectangle {
+    Image {
         anchors.fill: parent.gameWindowAnchorItem
-        color: "#000000"
+        source: "../../assets/img/Home.png"
     }
 
     Column {
