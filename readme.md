@@ -1,4 +1,4 @@
-#Game protoype using QML/JS and the V-Play game engine.
+# Game protoype using QML/JS and the V-Play game engine.
 
 
 
